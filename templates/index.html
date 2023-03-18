@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube Comment Downloader</title>
+  </head>
+  <body>
+    <h1>Youtube Comment Downloader</h1>
+    <form method="POST">
+      {{ form.csrf_token }}
+      <p>
+        {{ form.url.label }}<br>
+        {{ form.url(size=50) }}<br>
+        {% for error in form.url.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      <p>
+        {{ form.count.label }}<br>
+        {{ form.count() }}<br>
+        {% for error in form.count.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </p>
+      {{ form.submit() }}
+    </form>
+  </body>
+</html>

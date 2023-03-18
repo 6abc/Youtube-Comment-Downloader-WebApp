@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Comments</title>
+  </head>
+  <body>
+    <h1>Comments</h1>
+    <ul>
+      {% for comment in comments %}
+        <li>
+          <p>User: {{ comment.user }}</p>
+          <p>Comment: {{ comment.comment }}</p>
+          <p>Channel URL: <a href="{{ comment.channel_url }}">{{ comment.channel_url }}</a></p>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
