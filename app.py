@@ -5,7 +5,7 @@ from youtube_comment_downloader import YoutubeCommentDownloader, SORT_BY_POPULAR
 from itertools import islice
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret_key_here'
+app.config['SECRET_KEY'] = 'jaa_karle_hack_LOL'
 
 
 class CommentForm(FlaskForm):
@@ -16,7 +16,7 @@ class CommentForm(FlaskForm):
     'Comment Count',
     validators=[validators.DataRequired(),
                 validators.NumberRange(min=1)])
-  submit = SubmitField('Download Comments')
+  submit = SubmitField('Show Comments')
 
 
 @app.route('/', methods=['GET', 'POST'])
